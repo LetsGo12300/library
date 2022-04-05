@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
+body{
+    padding: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title{
+    margin: 20px;
+    text-align: center;
+}
+
 .container{
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 100px;
     gap: 20px;
 }
 
@@ -24,4 +36,43 @@
     margin-top: 20px;
     min-width: 100px;
     height: 30px;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 80%;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+form>div{
+    margin: 5px;
+}
+
+.btn{
+    text-align: center;
+}
+
+button[type="submit"]{
+    padding: 5px;
+    width: max(150px,20%);
+    height: 15%;
+    font-size: 1em;
+}
+
+input[type="text"]{
+    width: 90%;
+    height: 30px;
+    padding-left: 3px;
+}
+
+input[type="number"]{
+    width: max(50px, 10%);
+    height: 30px;
+    padding-left: 3px;
 }

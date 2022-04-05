@@ -49,6 +49,9 @@ addBookToLibrary(book2);
 const book3 = new Book("The Alchemist", "Paulo Coelho", 154, true);
 addBookToLibrary(book3);
 
+const book4 = new Book("The Hunger Games", "Suzanne Collins", 374, true);
+addBookToLibrary(book4);
+
 myLibrary.forEach(book => {
     printBook(book);
 });

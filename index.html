@@ -8,9 +8,50 @@
     <link rel="stylesheet" href="./static/styles.css">
 </head>
 <body>
-<div class="container">
-  
-</div>
+    <h1 class="title">
+        The Library
+    </h1>
+    <div class="form-container">
+        <form>
+            <div>
+                <p>
+                    <label for="book-title">BOOK TITLE</label>
+                </p>
+                <input type="text" name="book-title" id="book-title" placeholder="Input book title" required>
+            </div>
+
+            <div>
+                <p>
+                    <label for="book-author">BOOK AUTHOR</label>
+                </p>
+                <input type="text" name="book-author" id="book-author" placeholder="Input book author" required>
+            </div>
+
+            <div>
+                <p>
+                    <label for="book-pages">Number of pages</label>
+                </p>
+                <input type="number" name="book-pages" id="book-pages" placeholder="# of pages" required>
+            </div>
+
+            <div>
+                <p>
+                    <label for="book-title"></label>
+                </p>
+                <input type="radio" id="read-checkbox" name="read" value="true" checked>
+                <label for="read-checkbox">Read</label>
+
+                <input type="radio" id="unread-checkbox" name="read" value="false">
+                <label for="unread-checkbox">Unread</label>
+            </div>
+
+            <div class="btn">
+                <button type="submit">Add to Library</button>
+            </div>
+            
+        </form>
+    </div>
+    <div class="container"></div>
 <script src="./static/script.js"></script>
     
 </body>
