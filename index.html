@@ -11,8 +11,13 @@
     <h1 class="title">
         The Library
     </h1>
+
+    <div class="add-book">
+        <button id="add-btn">ADD A BOOK</button>
+    </div>
+
     <div class="form-container">
-        <form>
+        <form id="form" action='#'>
             <div>
                 <p>
                     <label for="book-title">BOOK TITLE</label>
@@ -38,15 +43,15 @@
                 <p>
                     <label for="book-title"></label>
                 </p>
-                <input type="radio" id="read-checkbox" name="read" value="true" checked>
+                <input type="radio" id="read-checkbox" name="read" value=true>
                 <label for="read-checkbox">Read</label>
 
-                <input type="radio" id="unread-checkbox" name="read" value="false">
+                <input type="radio" id="unread-checkbox" name="read" value=false>
                 <label for="unread-checkbox">Unread</label>
             </div>
 
             <div class="btn">
-                <button type="submit">Add to Library</button>
+                <button type="submit" id="add-to-lib-btn">Add to Library</button>
             </div>
             
         </form>

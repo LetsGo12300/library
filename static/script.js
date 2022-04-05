@@ -56,3 +56,17 @@ myLibrary.forEach(book => {
     printBook(book);
 });
 
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (event) => {
+    let title = form.elements['book-title'].value;
+    let author = form.elements['book-author'].value;
+    let pages = form.elements['book-pages'].value;
+    let readStatus = form.elements['read'].value == 'true' ? true : false;
+
+    let book = new Book(title, author, pages, readStatus);
+    addBookToLibrary(book);
+    printBook(book);
+
+    event.preventDefault();
+});
