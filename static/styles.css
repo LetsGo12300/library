@@ -40,9 +40,61 @@ body{
 }
 
 .form-container{
-    display: flex;
+    display: none;
     justify-content: center;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+    50% {
+        opacity: 0;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes hide{
+    0% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    50% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    100% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+  }
 
 form{
     width: 80%;
@@ -90,7 +142,7 @@ input[type="number"]{
 }
 
 #add-btn{
-    width: max(100px, 10%);
+    width: max(150px, 10%);
     height: 40px;
     padding: 5px;
     text-align: center;

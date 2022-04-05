@@ -100,3 +100,27 @@ function removeBook(indexOfBook){
     //remove from myLibrary array:
     delete myLibrary[indexOfBook];
 }
+
+let addButton = document.getElementById('add-btn');
+let formContainer = document.querySelector('.form-container');
+
+addButton.addEventListener('click', () => {
+    if (formContainer.style.display === 'flex'){
+        
+        formContainer.style.animationName = 'hide';
+        formContainer.style.animationPlayState = 'running';
+        formContainer.addEventListener('animationend', () => {
+            formContainer.style.display = 'none';
+            addButton.textContent = 'ADD A BOOK';
+        });
+    }
+    else {
+        formContainer.style.animationName = 'show';
+        formContainer.style.display = 'flex';
+        formContainer.style.animationPlayState = 'running';
+        formContainer.addEventListener('animationend', () => {
+            formContainer.style.display = 'flex';
+            addButton.textContent = 'CLOSE';
+        });
+    }
+});
