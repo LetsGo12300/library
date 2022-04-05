@@ -19,6 +19,12 @@ let container = document.querySelector('.container');
 function printBook(book){   // adds a book to div container
     const content = document.createElement('div');
     content.classList.add('card');
+    content.setAttribute('data-index', myLibrary.indexOf(book));
+
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('del-btn');
+    deleteButton.textContent = 'X';
+    content.appendChild(deleteButton);
 
     const title = document.createElement('h2');
     title.textContent = book.title;
