@@ -67,6 +67,10 @@ button[type="submit"]{
     border-radius: 0;
 }
 
+input{
+    margin: 3px;
+}
+
 input[type="text"]{
     width: 90%;
     height: 30px;
@@ -74,9 +78,10 @@ input[type="text"]{
 }
 
 input[type="number"]{
-    width: max(50px, 10%);
+    width: max(100px, 10%);
     height: 30px;
     padding-left: 3px;
+    overflow-x: scroll;
 }
 
 .add-book{
@@ -114,5 +119,5 @@ button:hover{
 }
 
 .del-btn:hover{
-    background-color: #b91c1c;
+    background-color: #ca7474;
 }

@@ -1,13 +1,13 @@
 let myLibrary = [];
 
 function Book(title, author, pages, read){
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = function(){
-      return info;
-  }
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.info = function(){
+        return info;
+    }
 }
 
 function addBookToLibrary(book){
@@ -76,3 +76,27 @@ form.addEventListener('submit', (event) => {
 
     event.preventDefault();
 });
+
+document.addEventListener('click', (ele) => {
+    const button = ele.target;
+    //if delete button is clicked
+    if (button.className === 'del-btn'){
+        let indexOfBook = button.parentNode.getAttribute('data-index');
+        removeBook(indexOfBook);
+    }
+    else if (button.className === 'read-btn'){
+        let indexOfBook = button.parentNode.getAttribute('data-index');
+        myLibrary[indexOfBook].read = !myLibrary[indexOfBook].read;
+        button.textContent = (myLibrary[indexOfBook].read ? 'READ' : 'UNREAD');
+    }
+});
+
+function removeBook(indexOfBook){
+    //remove from DOM:
+    let child = document.querySelector(`[data-index='${indexOfBook}']`);
+    let parent = document.querySelector('.container');
+    parent.removeChild(child);
+
+    //remove from myLibrary array:
+    delete myLibrary[indexOfBook];
+}
