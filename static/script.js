@@ -130,20 +130,24 @@ const bookTitle = document.getElementById('book-title');
 
 bookTitle.addEventListener('input', () => {
     bookTitle.setCustomValidity('');
+    bookTitle.style.outlineColor = 'black';
     bookTitle.checkValidity();
 });
 
 bookTitle.addEventListener('invalid', () => {
     bookTitle.setCustomValidity('Book title should not be blank');
+    bookTitle.style.outlineColor = 'red';
 });
 
 const bookAuthor = document.getElementById('book-author');
 
 bookAuthor.addEventListener('input', () => {
     bookAuthor.setCustomValidity('');
+    bookAuthor.style.outlineColor = 'black';
     bookAuthor.checkValidity();
 });
 
 bookAuthor.addEventListener('invalid', () => {
     bookAuthor.setCustomValidity('Book author should not be blank');
+    bookAuthor.style.outlineColor = 'red';
 });
