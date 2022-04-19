@@ -151,3 +151,20 @@ bookAuthor.addEventListener('invalid', () => {
     bookAuthor.setCustomValidity('Book author should not be blank');
     bookAuthor.style.outlineColor = 'red';
 });
+
+const bookPages = document.getElementById('book-pages');
+
+bookPages.addEventListener('input', () => {
+    bookPages.setCustomValidity('');
+    bookPages.style.outlineColor = 'black';
+    bookPages.checkValidity();
+});
+
+bookPages.addEventListener('invalid', () => {
+    bookPages.setCustomValidity('Input number of pages');
+    bookPages.style.outlineColor = 'red';
+
+    if (bookPages.validity.rangeUnderflow){
+        bookPages.setCustomValidity('Number of pages should not be less than 1');
+    }
+});
