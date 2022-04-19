@@ -124,3 +124,26 @@ addButton.addEventListener('click', () => {
         });
     }
 });
+
+// Form validation
+const bookTitle = document.getElementById('book-title');
+
+bookTitle.addEventListener('input', () => {
+    bookTitle.setCustomValidity('');
+    bookTitle.checkValidity();
+});
+
+bookTitle.addEventListener('invalid', () => {
+    bookTitle.setCustomValidity('Book title should not be blank');
+});
+
+const bookAuthor = document.getElementById('book-author');
+
+bookAuthor.addEventListener('input', () => {
+    bookAuthor.setCustomValidity('');
+    bookAuthor.checkValidity();
+});
+
+bookAuthor.addEventListener('invalid', () => {
+    bookAuthor.setCustomValidity('Book author should not be blank');
+});
