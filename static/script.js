@@ -75,6 +75,7 @@ form.addEventListener('submit', (event) => {
     printBook(book);
 
     event.preventDefault();
+    form.reset();
 });
 
 document.addEventListener('click', (ele) => {
